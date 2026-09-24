@@ -11,6 +11,7 @@ Connects [eResource Scheduler](https://www.eresourcescheduler.com) to AI clients
 | **Plugin ID** | `eresource-scheduler` |
 | **Display name** | eResource Scheduler |
 | **Claude marketplace** | `eresource-scheduler` |
+| **MCP Registry name** | `cloud.eresourcescheduler/eresource-scheduler` |
 
 ## What you can do
 
@@ -23,7 +24,7 @@ Actions run as the eRS user who authorizes the connection. Clients only use data
 
 ## Requirements
 
-- Cursor `3.13.0` or later, **or** a Claude plan that supports plugins / connectors
+- Cursor `3.13.0` or later, **or** a Claude plan that supports plugins / connectors, **or** an MCP client such as GitHub Copilot
 - An active eResource Scheduler account
 - Ability to complete OAuth sign-in when prompted
 
@@ -51,9 +52,24 @@ claude plugin install eresource-scheduler@eresource-scheduler
 
 Then enable the plugin and complete the eRS sign-in prompt when Claude connects to the MCP server.
 
+## Install — GitHub Copilot / MCP Registry
+
+Listing metadata lives in `server.json` (Official MCP Registry). Clients that support remote Streamable HTTP MCP (including GitHub Copilot) discover the connector from the registry, then connect to:
+
+`https://test.eresourcescheduler.cloud/mcp`
+
+### Publish (outside this repo)
+
+1. Host `/.well-known/mcp-registry-auth` on `eresourcescheduler.cloud`.
+2. `mcp-publisher login http --domain eresourcescheduler.cloud …`
+3. `mcp-publisher publish` (from a directory containing this `server.json`).
+4. Email `partnerships@github.com` for GitHub MCP Registry curation.
+
+Do not commit `key.pem`.
+
 ## MCP
 
-Root Cursor connector (`mcp.json`) and Claude bundled connector (`plugins/ers/.mcp.json`):
+Root Cursor connector (`mcp.json`), Claude bundled connector (`plugins/ers/.mcp.json`), and Registry remote (`server.json`):
 
 ```json
 {
@@ -107,6 +123,7 @@ Shared rules: [plugins/ers/skills/shared-patterns.md](plugins/ers/skills/shared-
 ├── .cursor-plugin/plugin.json               # Cursor marketplace manifest
 ├── mcp.json                                 # Cursor MCP connector
 ├── .claude-plugin/marketplace.json          # Claude marketplace catalog
+├── server.json                              # Official MCP Registry / Copilot
 ├── assets/logo.png                          # Plugin logo
 └── plugins/ers/
     ├── .claude-plugin/plugin.json           # Claude plugin manifest
