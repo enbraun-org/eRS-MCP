@@ -1,18 +1,17 @@
-# Skills (template)
+# eRS MCP skills
 
-Canonical skills live here. Cursor loads via root `.cursor-plugin/plugin.json` → `"skills": "./plugins/ers/skills"`. Claude loads via root `.claude-plugin/marketplace.json` → `./plugins/ers`.
+Job skills for agents using the eResource Scheduler MCP. Same layout as monday CRM skills: one folder, one `SKILL.md`, YAML frontmatter, numbered steps, tool list, error table, completion checklist.
 
-## On `main`
+Live tool schemas remain the source of truth for parameters. If a skill and a tool description disagree, follow the tool response and schema.
 
-Only `example-skill` (copy-me stub). Add real skills on a feature branch, then PR into `main`.
-
-| Folder | Role |
+| Skill | Use when |
 | --- | --- |
-| `example-skill/` | Authoring template — do not ship as a product skill |
+| [setup](setup/SKILL.md) | Connect, first run, what MCP can/cannot do |
+| [workspace-builder](workspace-builder/SKILL.md) | Create people, equipment, projects, tasks from scratch |
+| [daily-briefing](daily-briefing/SKILL.md) | What to look at today: free/busy, over capacity, pending timesheets |
+| [reports](reports/SKILL.md) | Utilization, availability, financials, gap, forecast, progress, timesheet report |
+| [booking-allocation](booking-allocation/SKILL.md) | Book, unfilled demand, split, shift dates |
+| [timesheet-workflow](timesheet-workflow/SKILL.md) | Log time, copy from schedule, submit/approve |
+| [bulk-hygiene](bulk-hygiene/SKILL.md) | Same change on many records, archive, mass create, delete |
 
-## How to add a skill
-
-1. Copy `example-skill/` → `<skill-name>/`.
-2. Edit `SKILL.md` frontmatter and body.
-3. Update this table.
-4. Open a PR into `main`.
+Shared rules used by every skill: [shared-patterns.md](shared-patterns.md).

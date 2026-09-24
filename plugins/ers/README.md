@@ -1,10 +1,12 @@
-# Claude plugin package (template)
+# eResource Scheduler — Claude plugin package
 
-Nested Claude plugin. Catalogued from repo root: `.claude-plugin/marketplace.json` → `source: "./plugins/ers"`.
+Nested Claude package (`source`: `./plugins/ers` from root marketplace catalog).
 
-## Status
+**This branch:** skills under `skills/` are ready for Cursor (shared path). Claude manifests (`.claude-plugin/plugin.json`, `.mcp.json`) remain template until the Claude feature branch.
 
-Template only. Replace placeholders in `.claude-plugin/plugin.json` and `.mcp.json` on a feature branch. Real skills land under `skills/` via PR.
+## Skills
+
+See [skills/README.md](skills/README.md).
 
 ## License
 
