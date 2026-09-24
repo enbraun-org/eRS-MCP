@@ -1,0 +1,13 @@
+# Secrets / local registry publish
+key.pem
+*.pem
+mcp-registry-auth
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Node (if added later)
+node_modules/

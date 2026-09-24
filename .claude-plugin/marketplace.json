@@ -1,0 +1,25 @@
+{
+  "name": "your-marketplace",
+  "version": "0.1.0",
+  "description": "TODO: Claude marketplace description.",
+  "owner": {
+    "name": "YOUR_ORG",
+    "email": "support@example.com",
+    "url": "https://example.com"
+  },
+  "plugins": [
+    {
+      "name": "your-plugin",
+      "displayName": "Your Plugin Display Name",
+      "description": "TODO: short plugin description for Claude.",
+      "source": "./plugins/ers",
+      "version": "0.1.0",
+      "author": {
+        "name": "YOUR_ORG"
+      },
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["TODO", "mcp"]
+    }
+  ]
+}
