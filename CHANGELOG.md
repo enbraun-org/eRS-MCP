@@ -8,3 +8,9 @@ All notable changes to this repository will be documented here.
 - Logo: `assets/logo.png`.
 - Skills under `plugins/ers/skills/`: `setup`, `workspace-builder`, `daily-briefing`, `reports`, `booking-allocation`, `timesheet-workflow`, `bulk-hygiene`.
 - Cursor manifest loads skills via `"skills": "./plugins/ers/skills"`.
+
+## 1.0.0 — Claude plugin packaging
+
+- Claude marketplace: `.claude-plugin/marketplace.json` → `./plugins/ers`.
+- Claude plugin: `plugins/ers/.claude-plugin/plugin.json`.
+- Bundled MCP: `plugins/ers/.mcp.json` → `https://test.eresourcescheduler.cloud/mcp` (`eResource Scheduler`).

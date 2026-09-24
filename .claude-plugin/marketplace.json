@@ -1,25 +1,32 @@
 {
-  "name": "your-marketplace",
-  "version": "0.1.0",
-  "description": "TODO: Claude marketplace description.",
+  "name": "eresource-scheduler-mcp",
+  "version": "1.0.0",
+  "description": "eResource Scheduler plugin marketplace — MCP connector and skills for resource scheduling, bookings, timesheets, and reports.",
   "owner": {
-    "name": "YOUR_ORG",
-    "email": "support@example.com",
-    "url": "https://example.com"
+    "name": "Enbraun Technologies Private Limited",
+    "email": "support@enbraun.com",
+    "url": "https://www.eresourcescheduler.com"
   },
   "plugins": [
     {
-      "name": "your-plugin",
-      "displayName": "Your Plugin Display Name",
-      "description": "TODO: short plugin description for Claude.",
+      "name": "eresource-scheduler",
+      "displayName": "eResource Scheduler",
+      "description": "Manage resources, projects, bookings, timesheets, rates, and reports via the eRS MCP connector.",
       "source": "./plugins/ers",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "author": {
-        "name": "YOUR_ORG"
+        "name": "Enbraun Technologies Private Limited"
       },
       "license": "MIT",
       "category": "productivity",
-      "keywords": ["TODO", "mcp"]
+      "keywords": [
+        "ers",
+        "eresource-scheduler",
+        "resource-scheduling",
+        "timesheets",
+        "bookings",
+        "mcp"
+      ]
     }
   ]
 }

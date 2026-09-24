@@ -2,14 +2,15 @@
 
 **Manage resources, customize dashboards & track projects**
 
-Cursor plugin that connects [eResource Scheduler](https://www.eresourcescheduler.com) to Cursor via a remote MCP server. After you install and sign in, Cursor can work with your schedules, resources, projects, bookings, and timesheets using your account permissions.
+Connects [eResource Scheduler](https://www.eresourcescheduler.com) to AI clients via a remote MCP server. After you install and sign in, the client can work with your schedules, resources, projects, bookings, and timesheets using your account permissions.
 
 | | |
 | --- | --- |
 | **Category** | Productivity |
 | **Publisher** | Enbraun Technologies Private Limited |
-| **Plugin** | `eresource-scheduler` |
+| **Plugin ID** | `eresource-scheduler` |
 | **Display name** | eResource Scheduler |
+| **Claude marketplace** | `eresource-scheduler` |
 
 ## What you can do
 
@@ -18,15 +19,15 @@ Cursor plugin that connects [eResource Scheduler](https://www.eresourcescheduler
 - Work with timesheets and related status
 - Run guided skills for briefing, reports, bookings, and bulk updates
 
-Actions run as the eRS user who authorizes the connection. Cursor only uses data that user can access.
+Actions run as the eRS user who authorizes the connection. Clients only use data that user can access.
 
 ## Requirements
 
-- Cursor `3.13.0` or later
+- Cursor `3.13.0` or later, **or** a Claude plan that supports plugins / connectors
 - An active eResource Scheduler account
 - Ability to complete OAuth sign-in when prompted
 
-## Install
+## Install — Cursor
 
 1. Open **Cursor Settings → Plugins**.
 2. Search for **eResource Scheduler**.
@@ -34,9 +35,25 @@ Actions run as the eRS user who authorizes the connection. Cursor only uses data
 
 Or run `/add-plugin eresource-scheduler` in chat.
 
+## Install — Claude
+
+```bash
+claude plugin marketplace add enbraun-org/eRS-MCP
+claude plugin install eresource-scheduler@eresource-scheduler
+```
+
+From a local checkout:
+
+```bash
+claude plugin marketplace add ./path/to/eRS-MCP
+claude plugin install eresource-scheduler@eresource-scheduler
+```
+
+Then enable the plugin and complete the eRS sign-in prompt when Claude connects to the MCP server.
+
 ## MCP
 
-Root connector (`mcp.json`):
+Root Cursor connector (`mcp.json`) and Claude bundled connector (`plugins/ers/.mcp.json`):
 
 ```json
 {
@@ -87,10 +104,14 @@ Shared rules: [plugins/ers/skills/shared-patterns.md](plugins/ers/skills/shared-
 
 ```text
 .
-├── .cursor-plugin/plugin.json       # Cursor marketplace manifest
-├── mcp.json                         # Remote eRS MCP connector
-├── assets/logo.png                  # Plugin logo
-└── plugins/ers/skills/              # Cursor skills
+├── .cursor-plugin/plugin.json               # Cursor marketplace manifest
+├── mcp.json                                 # Cursor MCP connector
+├── .claude-plugin/marketplace.json          # Claude marketplace catalog
+├── assets/logo.png                          # Plugin logo
+└── plugins/ers/
+    ├── .claude-plugin/plugin.json           # Claude plugin manifest
+    ├── .mcp.json                            # Claude MCP connector
+    └── skills/                              # Shared agent skills
 ```
 
 ## License
