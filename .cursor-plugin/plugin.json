@@ -2,7 +2,7 @@
   "name": "eresource-scheduler",
   "displayName": "eResource Scheduler",
   "version": "1.0.0",
-  "description": "Connect eResource Scheduler: book people, log time, and run utilization and financial reports.",
+  "description": "Manage resources, customize dashboards & track projects",
   "author": {
     "name": "Enbraun Technologies Private Limited",
     "email": "support@enbraun.com"
