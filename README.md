@@ -74,7 +74,7 @@ Root Cursor connector (`mcp.json`), Claude bundled connector (`plugins/ers/.mcp.
 ```json
 {
   "mcpServers": {
-    "eResource Scheduler": {
+    "eresource-scheduler": {
       "type": "http",
       "url": "https://app.eresourcescheduler.cloud/mcp"
     }

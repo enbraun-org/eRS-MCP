@@ -25,7 +25,7 @@ claude plugin install eresource-scheduler@eresource-scheduler
 ```json
 {
   "mcpServers": {
-    "eResource Scheduler": {
+    "eresource-scheduler": {
       "type": "http",
       "url": "https://app.eresourcescheduler.cloud/mcp"
     }
