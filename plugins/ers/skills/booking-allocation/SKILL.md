@@ -3,7 +3,7 @@ name: booking-allocation
 description: Book people or assets onto projects, record unmet demand (requirements), split or shift bookings. Use when someone says "book", "allocate", "schedule X on Y", "create a requirement", "staff a role", "split this booking", "postpone/prepone/extend bookings", or "who is booked". Do NOT use for logging time (timesheet-workflow) or utilization totals (reports).
 argument-hint: "[optional: person, project, dates]"
 user-invocable: true
-allowed-tools: [ers_type_get, ers_booking_search, ers_booking_get, ers_booking_create, ers_booking_update, ers_booking_bulk_edit, ers_booking_bulk_move, ers_booking_delete, ers_requirement_search, ers_requirement_get, ers_requirement_create, ers_requirement_update, ers_requirement_bulk_edit, ers_requirement_delete, ers_manage_requirement_record]
+allowed-tools: [ers_type_get, ers_booking_search, ers_booking_get, ers_booking_create, ers_booking_update, ers_booking_bulk_edit, ers_booking_bulk_move, ers_booking_delete, ers_requirement_create, ers_requirement_update, ers_requirement_bulk_edit, ers_requirement_delete, ers_manage_requirement_record]
 ---
 
 # Booking and Allocation

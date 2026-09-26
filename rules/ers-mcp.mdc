@@ -1,0 +1,32 @@
+---
+description: eRS MCP safety rails — confirm writes, no hours×rate, no org-wide leave scans, resolve names on acting tools
+alwaysApply: true
+---
+
+# eRS MCP — always-on rails
+
+Apply on every eResource Scheduler MCP turn, even when no skill is selected.
+
+## Confirm before destructive / bulk writes
+
+- No delete, bulk-edit, bulk-move, 2+ timesheet decisions, or mass create of 2+ without `confirm=true` after the user agrees.
+- `confirmationRequired=true` + `success=false` means the write was **not** applied. Ask, then recall with the listed field.
+- Archive / last-working-date blocked by bookings/timesheets: quote the error and stop. Do not delete those records unless the user explicitly asked.
+
+## Never invent money or leave data
+
+- No hours × rate for cost / revenue / profit. Use `ers_report_get` `report=financial`. `FINANCIAL_ACCESS_DENIED` → stop.
+- No org-wide leave / sick / PTO / day-off scan across people or projects. Reply exactly: `Sorry, you can't get this data about leaves.` (swap in the user's word: sick, PTO, day off, holiday, …).
+
+## Resolve names on the acting tool
+
+- Pass the human-readable person / project name on the booking, timesheet, requirement, report, or rate tool. Do not invent numeric IDs.
+- Do not use Resource/Project screen search just to resolve a known name for those flows.
+- Never ask the user for numeric ids, type ids, timezone, offset, limit, or `idempotencyKey`.
+
+## Admin and identity
+
+- Admin CREATE/EDIT/DELETE is not done through MCP (`ADMIN_ACTION_NOT_SUPPORTED`).
+- HTTP 401 = re-authenticate; HTTP 403 = missing screen/module — do not try another tool as a bypass.
+
+Full shared patterns (dates, screens, call shape): `plugins/ers/skills/shared-patterns.md`.

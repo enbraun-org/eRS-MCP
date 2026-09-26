@@ -2,9 +2,6 @@
   "name": "eresource-scheduler",
   "displayName": "eResource Scheduler",
   "version": "1.0.0",
-  "minClientVersions": {
-    "cursor": "3.13.0"
-  },
   "description": "Manage resources, customize dashboards & track projects",
   "author": {
     "name": "Enbraun Technologies Private Limited",
@@ -33,5 +30,6 @@
     "mcp"
   ],
   "mcpServers": "./mcp.json",
-  "skills": "./plugins/ers/skills"
+  "skills": "./plugins/ers/skills",
+  "rules": "./rules"
 }

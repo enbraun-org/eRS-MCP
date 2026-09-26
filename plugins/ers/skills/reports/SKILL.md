@@ -1,12 +1,10 @@
 ---
-
-## name: reports
-description: Runs one eRS aggregate report — utilization, availability, financials, resource gap, capacity forecast, project progress, or timesheet report. Use when someone says "total hours", "who's free","who's overloaded", "utilization", "availability report", "","planned vs actual","planned", "actual", "resource gap", "capacity forecast", "project progress", "timesheet report", "cost", "revenue", or "profit". Do NOT use for who is booked (booking-allocation) or who logged which entry (timesheet-workflow) or resource and project detail search.
+name: reports
+description: Runs one eRS aggregate report — utilization, availability, financials, resource gap, capacity forecast, project progress, or timesheet report. Use when someone says "total hours", "who's free", "who's overloaded", "utilization", "availability report", "planned vs actual", "planned", "actual", "resource gap", "capacity forecast", "project progress", "timesheet report", "cost", "revenue", or "profit". Do NOT use for who is booked (booking-allocation) or who logged which entry (timesheet-workflow) or resource and project detail search.
 argument-hint: "[optional: 'planned availability Chris Rose this week']"
 user-invocable: true
-allowed-tools: [ers_report_get]
-
-
+allowed-tools: [ers_report_get, ers_calendar_get]
+---
 
 # Reports
 

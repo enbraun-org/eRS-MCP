@@ -28,7 +28,8 @@ Flow: **Trigger → Resolve set → Plan → Confirm → One native write → Su
 - Same field on 2+ → `ers_*_bulk_edit`, not a loop of update.
 - Same note on 2+/all resources: page `ers_resource_search` then **one** `ers_manage_resource_record` `entity=note` `resourceIds` + `content`. FORBIDDEN: N creates. Same for projects with `projectIds`.
 - Mass book / mass requirement: one `ers_booking_create` / `ers_requirement_create` with filters or collective phrase (booking-allocation has the field rules). `confirm=true` when 2+.
-- Hide project = `is_archive`. Permanent delete = `ers_project_delete`. Archive resource = `last_date=setArchive` (yesterday, never today). Restore `last_date=null`. Read resource archive with `$archive_res`.
+- Hide project = `is_archive`. Permanent delete = `ers_project_delete`. Archive resource = `last_date=setArchive` (yesterday, never today). Restore `last_date=null`. Resource archive status is `last_date` only — never `$archive_res` on resource search (that filter is booking Chart only).
+- Active resources: `{"last_date:ex":[null,"<yesterday>"]}`. Archived resources: `{"last_date:lt":"<today>"}`.
 
 ## Tools (MCP)
 
@@ -62,7 +63,7 @@ Never convert a list question into a delete. Never delete related bookings to un
 
 Search with server-side filters. Page until `has_more` is false when collecting ids for notes/bulk. Never invent ids.
 
-- Active projects: `{"is_archive":false}`. Active resources: `{"$archive_res":false}`.
+- Active projects: `{"is_archive":false}`. Active resources: `{"last_date:ex":[null,"<yesterday>"]}`. Archived resources: `{"last_date:lt":"<today>"}`.
 - Ids N to M: one search `{"id:bt":[N,M]}` — never loop get.
 - Booking/timesheet names: pass names on those search tools (acting screen).
 

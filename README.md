@@ -24,11 +24,12 @@ Actions run as the eRS user who authorizes the connection. Clients only use data
 
 ## Requirements
 
-- Cursor `3.13.0` or later, **or** a Claude plan that supports plugins / connectors, **or** an MCP client such as GitHub Copilot
 - An active eResource Scheduler account
 - Ability to complete OAuth sign-in when prompted
+- One of: Cursor, Claude (with plugins), or an MCP client that can load Official MCP Registry remotes (e.g. GitHub Copilot)
 
-## Install — Cursor
+
+###  Install — Cursor
 
 1. Open **Cursor Settings → Plugins**.
 2. Search for **eResource Scheduler**.

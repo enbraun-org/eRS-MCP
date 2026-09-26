@@ -86,7 +86,7 @@ Option fields: write `options[].id`, never the label. Roles on a resource: `fiel
 
 Print one plan:
 
-> I'll create `<type name>` **\<display name\>** with: \<required fields you have\>. Proceed? (yes / change type / no)
+> I'll create `<name>` **`<type>`** with: `<fields>`. Proceed? (yes / change type / no)
 
 No writes until yes.
 
@@ -114,7 +114,7 @@ Never create a requirement here.
 
 ## Step 7: Close
 
-`Created <name> (<type name>).`
+`Created <type> (<name>).`
 
 ---
 
