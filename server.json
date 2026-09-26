@@ -1,18 +1,18 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "com.example/your-server",
-  "title": "Your Product Name",
-  "description": "TODO: one short sentence for the Official MCP Registry listing.",
-  "version": "0.1.0",
-  "websiteUrl": "https://example.com",
+  "name": "cloud.eresourcescheduler/eresource-scheduler",
+  "title": "eResource Scheduler",
+  "description": "Manage resources, customize dashboards & track projects",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.eresourcescheduler.com",
   "repository": {
-    "url": "https://github.com/YOUR_ORG/YOUR_REPO",
+    "url": "https://github.com/enbraun-org/eRS-MCP",
     "source": "github"
   },
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.example.com/mcp"
+      "url": "https://test.eresourcescheduler.cloud/mcp"
     }
   ]
 }

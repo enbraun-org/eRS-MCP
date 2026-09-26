@@ -14,3 +14,9 @@ All notable changes to this repository will be documented here.
 - Claude marketplace: `.claude-plugin/marketplace.json` → `./plugins/ers`.
 - Claude plugin: `plugins/ers/.claude-plugin/plugin.json`.
 - Bundled MCP: `plugins/ers/.mcp.json` → `https://test.eresourcescheduler.cloud/mcp` (`eResource Scheduler`).
+
+## 1.0.0 — Official MCP Registry metadata
+
+- Added `server.json` for Official MCP Registry / GitHub Copilot connector listing.
+- Name: `cloud.eresourcescheduler/eresource-scheduler`.
+- Remote: `https://test.eresourcescheduler.cloud/mcp` (`streamable-http`).
