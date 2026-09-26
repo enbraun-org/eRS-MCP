@@ -1,16 +1,23 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "your-plugin",
-  "displayName": "Your Plugin Display Name",
-  "description": "TODO: short Claude plugin description.",
-  "version": "0.1.0",
+  "name": "eresource-scheduler",
+  "displayName": "eResource Scheduler",
+  "description": "Manage resources, customize dashboards & track projects",
+  "version": "1.0.0",
   "defaultEnabled": false,
   "author": {
-    "name": "YOUR_ORG",
-    "email": "support@example.com"
+    "name": "Enbraun Technologies Private Limited",
+    "email": "support@enbraun.com"
   },
-  "homepage": "https://example.com",
-  "repository": "https://github.com/YOUR_ORG/YOUR_REPO",
+  "homepage": "https://www.eresourcescheduler.com",
+  "repository": "https://github.com/enbraun-org/eRS-MCP",
   "license": "MIT",
-  "keywords": ["TODO", "mcp"]
+  "keywords": [
+    "ers",
+    "eresource-scheduler",
+    "resource-scheduling",
+    "timesheets",
+    "bookings",
+    "mcp"
+  ]
 }
