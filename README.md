@@ -1,6 +1,6 @@
 # eResource Scheduler
 
-**Manage resources, customize dashboards & track projects**
+**Enterprise resource scheduling for optimal utilization and higher margins.**
 
 Connects [eResource Scheduler](https://www.eresourcescheduler.com) to AI clients via a remote MCP server. After you install and sign in, the client can work with your schedules, resources, projects, bookings, and timesheets using your account permissions.
 
@@ -112,7 +112,8 @@ Shared rules: [plugins/ers/skills/shared-patterns.md](plugins/ers/skills/shared-
 ## Privacy, docs, and support
 
 - [Documentation — Connect eRS to your AI assistant](https://support.eresourcescheduler.cloud/hc/en-us/articles/62303968313369-How-to-Connect-eRS-to-Your-AI-Assistant)
-- [Privacy policy](https://www.eresourcescheduler.com/privacy-policy)
+- [Privacy policy](https://support.eresourcescheduler.cloud/hc/en-us/articles/4406933353997)
+- [Terms of service](https://support.eresourcescheduler.cloud/hc/en-us/articles/4406940258957)
 - [Contact support](https://www.eresourcescheduler.com/contact)
 - Product: https://www.eresourcescheduler.com
 - Support email: support@enbraun.com

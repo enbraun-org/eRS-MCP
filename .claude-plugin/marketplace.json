@@ -1,7 +1,7 @@
 {
   "name": "eresource-scheduler",
   "version": "1.0.0",
-  "description": "Manage resources, customize dashboards & track projects",
+  "description": "Enterprise resource scheduling for optimal utilization and higher margins.",
   "owner": {
     "name": "Enbraun Technologies Private Limited",
     "email": "support@enbraun.com",
@@ -11,7 +11,7 @@
     {
       "name": "eresource-scheduler",
       "displayName": "eResource Scheduler",
-      "description": "Manage resources, customize dashboards & track projects",
+      "description": "Enterprise resource scheduling for optimal utilization and higher margins.",
       "source": "./plugins/ers",
       "version": "1.0.0",
       "author": {

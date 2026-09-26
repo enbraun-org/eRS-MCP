@@ -1,6 +1,6 @@
 # eResource Scheduler — Claude plugin
 
-Claude package for **eResource Scheduler**: manage resources, customize dashboards & track projects.
+Claude package for **eResource Scheduler**: enterprise resource scheduling for optimal utilization and higher margins.
 
 Catalogued from the repo root via `.claude-plugin/marketplace.json` (`source`: `./plugins/ers`). Bundles the remote eRS MCP connector in `.mcp.json`. Skills live under `skills/` (shared with Cursor).
 
@@ -42,7 +42,8 @@ See [skills/README.md](skills/README.md).
 ## Links
 
 - [Documentation](https://support.eresourcescheduler.cloud/hc/en-us/articles/62303968313369-How-to-Connect-eRS-to-Your-AI-Assistant)
-- [Privacy policy](https://www.eresourcescheduler.com/privacy-policy)
+- [Privacy policy](https://support.eresourcescheduler.cloud/hc/en-us/articles/4406933353997)
+- [Terms of service](https://support.eresourcescheduler.cloud/hc/en-us/articles/4406940258957)
 - [Support](https://www.eresourcescheduler.com/contact)
 - [Product](https://www.eresourcescheduler.com)
 
