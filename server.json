@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://test.eresourcescheduler.cloud/mcp"
+      "url": "https://app.eresourcescheduler.cloud/mcp"
     }
   ]
 }

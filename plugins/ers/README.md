@@ -27,13 +27,13 @@ claude plugin install eresource-scheduler@eresource-scheduler
   "mcpServers": {
     "eResource Scheduler": {
       "type": "http",
-      "url": "https://test.eresourcescheduler.cloud/mcp"
+      "url": "https://app.eresourcescheduler.cloud/mcp"
     }
   }
 }
 ```
 
-Auth is OAuth 2.0 against eRS. This package currently points at the eRS **test** MCP endpoint.
+Auth is OAuth 2.0 against eRS. This package points at the eRS **app** MCP endpoint.
 
 ## Skills
 

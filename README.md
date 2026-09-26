@@ -56,7 +56,7 @@ Then enable the plugin and complete the eRS sign-in prompt when Claude connects 
 
 Listing metadata lives in `server.json` (Official MCP Registry). Clients that support remote Streamable HTTP MCP (including GitHub Copilot) discover the connector from the registry, then connect to:
 
-`https://test.eresourcescheduler.cloud/mcp`
+`https://app.eresourcescheduler.cloud/mcp`
 
 ### Publish (outside this repo)
 
@@ -76,7 +76,7 @@ Root Cursor connector (`mcp.json`), Claude bundled connector (`plugins/ers/.mcp.
   "mcpServers": {
     "eResource Scheduler": {
       "type": "http",
-      "url": "https://test.eresourcescheduler.cloud/mcp"
+      "url": "https://app.eresourcescheduler.cloud/mcp"
     }
   }
 }
@@ -84,7 +84,7 @@ Root Cursor connector (`mcp.json`), Claude bundled connector (`plugins/ers/.mcp.
 
 - **Transport:** Streamable HTTP (remote)
 - **Auth:** OAuth 2.0 against eResource Scheduler
-- **Endpoint:** currently the eRS **test** MCP URL (swap to production before public launch)
+- **Endpoint:** the eRS **app** MCP URL
 
 ## Skills
 
