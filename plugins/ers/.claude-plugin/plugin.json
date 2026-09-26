@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "eresource-scheduler",
   "displayName": "eResource Scheduler",
-  "description": "Manage resources, projects, bookings, timesheets, rates, and reports via the eRS MCP connector.",
+  "description": "Manage resources, customize dashboards & track projects",
   "version": "1.0.0",
   "defaultEnabled": false,
   "author": {

@@ -1,7 +1,7 @@
 {
-  "name": "eresource-scheduler-mcp",
+  "name": "eresource-scheduler",
   "version": "1.0.0",
-  "description": "eResource Scheduler plugin marketplace — MCP connector and skills for resource scheduling, bookings, timesheets, and reports.",
+  "description": "Manage resources, customize dashboards & track projects",
   "owner": {
     "name": "Enbraun Technologies Private Limited",
     "email": "support@enbraun.com",
@@ -11,7 +11,7 @@
     {
       "name": "eresource-scheduler",
       "displayName": "eResource Scheduler",
-      "description": "Manage resources, projects, bookings, timesheets, rates, and reports via the eRS MCP connector.",
+      "description": "Manage resources, customize dashboards & track projects",
       "source": "./plugins/ers",
       "version": "1.0.0",
       "author": {
