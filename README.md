@@ -1,27 +1,42 @@
-# eResource Scheduler (eRS MCP)
+# eResource Scheduler
 
-Monorepo for the eResource Scheduler AI plugin.
+**Manage resources, customize dashboards & track projects**
 
-**This branch:** Cursor plugin — connector, logo, and skills. Claude marketplace stubs and `server.json` stay as template until their branches.
+Cursor plugin that connects [eResource Scheduler](https://www.eresourcescheduler.com) to Cursor via a remote MCP server. After you install and sign in, Cursor can work with your schedules, resources, projects, bookings, and timesheets using your account permissions.
 
-## Cursor (this branch)
-
-| File | Role |
+| | |
 | --- | --- |
-| `.cursor-plugin/plugin.json` | Cursor marketplace manifest |
-| `mcp.json` | eRS MCP (`https://test.eresourcescheduler.cloud/mcp`) |
-| `plugins/ers/skills/` | Skills (Cursor loads via `"skills": "./plugins/ers/skills"`) |
-| `assets/logo.png` | Plugin logo |
+| **Category** | Productivity |
+| **Publisher** | Enbraun Technologies Private Limited |
+| **Plugin** | `eresource-scheduler` |
+| **Display name** | eResource Scheduler |
 
-### Install
+## What you can do
+
+- View and manage resource schedules and availability
+- Track projects, bookings, and allocations
+- Work with timesheets and related status
+- Run guided skills for briefing, reports, bookings, and bulk updates
+
+Actions run as the eRS user who authorizes the connection. Cursor only uses data that user can access.
+
+## Requirements
+
+- Cursor `3.13.0` or later
+- An active eResource Scheduler account
+- Ability to complete OAuth sign-in when prompted
+
+## Install
 
 1. Open **Cursor Settings → Plugins**.
 2. Search for **eResource Scheduler**.
-3. Click **Install**, then complete the ERS sign-in prompt.
+3. Click **Install**, then complete the eRS sign-in prompt.
 
 Or run `/add-plugin eresource-scheduler` in chat.
 
-### MCP
+## MCP
+
+Root connector (`mcp.json`):
 
 ```json
 {
@@ -34,9 +49,11 @@ Or run `/add-plugin eresource-scheduler` in chat.
 }
 ```
 
-Auth is OAuth 2.0 against ERS.
+- **Transport:** Streamable HTTP (remote)
+- **Auth:** OAuth 2.0 against eResource Scheduler
+- **Endpoint:** currently the eRS **test** MCP URL (swap to production before public launch)
 
-### Skills
+## Skills
 
 | Skill | What it does |
 | --- | --- |
@@ -50,29 +67,32 @@ Auth is OAuth 2.0 against ERS.
 
 Shared rules: [plugins/ers/skills/shared-patterns.md](plugins/ers/skills/shared-patterns.md).
 
-### Notes
+## Example prompts
 
-- Tool calls run as the ERS user who authorizes the connection.
-- This branch points at the ERS **test** MCP endpoint.
+1. Show the overall utilization for this quarter.
+2. Show resources who are overutilized.
+3. List all working and non-working exceptions for David this month.
+4. List all bookings for Ava starting this week or next week.
+5. Henry, Ava, and Lucas have worked 4 hours on Cobalt Mobile App every day this week. Enter and submit their timesheets.
 
-## Layout
+## Privacy, docs, and support
+
+- [Documentation — Connect eRS to your AI assistant](https://support.eresourcescheduler.cloud/hc/en-us/articles/62303968313369-How-to-Connect-eRS-to-Your-AI-Assistant)
+- [Privacy policy](https://www.eresourcescheduler.com/privacy-policy)
+- [Contact support](https://www.eresourcescheduler.com/contact)
+- Product: https://www.eresourcescheduler.com
+- Support email: support@enbraun.com
+
+## Repository layout
 
 ```text
 .
-├── .cursor-plugin/plugin.json       # Cursor (this branch)
-├── mcp.json
-├── plugins/ers/skills/              # Skills (this branch)
-├── assets/logo.png
-├── .claude-plugin/marketplace.json  # Claude — template (other branch)
-├── server.json                      # MCP Registry — template (other branch)
-└── plugins/ers/.claude-plugin/      # Claude — template (other branch)
+├── .cursor-plugin/plugin.json       # Cursor marketplace manifest
+├── mcp.json                         # Remote eRS MCP connector
+├── assets/logo.png                  # Plugin logo
+└── plugins/ers/skills/              # Cursor skills
 ```
-
-## Docs
-
-- Product: https://www.eresourcescheduler.com
-- Server URL: https://test.eresourcescheduler.cloud/mcp
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).

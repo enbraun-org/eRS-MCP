@@ -5,7 +5,7 @@
   "minClientVersions": {
     "cursor": "3.13.0"
   },
-  "description": "Manage resources, projects, bookings, timesheets, rates, and reports.",
+  "description": "Manage resources, customize dashboards & track projects",
   "author": {
     "name": "Enbraun Technologies Private Limited",
     "email": "support@enbraun.com"
