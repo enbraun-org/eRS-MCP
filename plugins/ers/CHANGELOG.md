@@ -1,5 +1,5 @@
 # Changelog
 
-## 0.1.0 — template scaffold
+## 1.0.0
 
-- Empty Claude plugin shell and `example-skill` stub only.
+- Skills under `skills/`: `setup`, `workspace-builder`, `daily-briefing`, `reports`, `booking-allocation`, `timesheet-workflow`, `bulk-hygiene`.
