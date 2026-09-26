@@ -24,11 +24,22 @@ Actions run as the eRS user who authorizes the connection. Clients only use data
 
 ## Requirements
 
-- Cursor `3.13.0` or later, **or** a Claude plan that supports plugins / connectors, **or** an MCP client such as GitHub Copilot
 - An active eResource Scheduler account
 - Ability to complete OAuth sign-in when prompted
+- One of: Cursor, Claude (with plugins), or an MCP client that can load Official MCP Registry remotes (e.g. GitHub Copilot)
 
-## Install — Cursor
+## Three distribution paths (not the same listing)
+
+One push to this GitHub repo does **not** list you on every store. Each channel is separate:
+
+| Channel | What it is | How users get it |
+| --- | --- | --- |
+| **Cursor Marketplace** | Official Cursor plugin listing (after Cursor review) | Settings → Plugins → search **eResource Scheduler**, or `/add-plugin eresource-scheduler` once listed |
+| **Claude (this repo marketplace)** | Your GitHub catalog via `.claude-plugin/marketplace.json` — **not** Anthropic’s Software Directory by itself | `claude plugin marketplace add enbraun-org/eRS-MCP` then `claude plugin install eresource-scheduler@eresource-scheduler` |
+| **Anthropic Software Directory** | Separate Claude.ai / Console submission + review | Submit the public repo through Anthropic’s directory forms (in addition to the repo marketplace above) |
+| **GitHub Copilot / Official MCP Registry** | `server.json` published with `mcp-publisher` — **not** Cursor or Claude install | After registry publish (+ optional `partnerships@github.com`), Copilot and other registry clients discover the remote MCP |
+
+### Cursor (Marketplace)
 
 1. Open **Cursor Settings → Plugins**.
 2. Search for **eResource Scheduler**.

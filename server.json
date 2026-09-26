@@ -7,8 +7,15 @@
   "websiteUrl": "https://www.eresourcescheduler.com",
   "repository": {
     "url": "https://github.com/enbraun-org/eRS-MCP",
-    "source": "github"
+    "source": "github",
+    "id": "1382947326"
   },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/enbraun-org/eRS-MCP/main/assets/logo.png",
+      "mimeType": "image/png"
+    }
+  ],
   "remotes": [
     {
       "type": "streamable-http",
