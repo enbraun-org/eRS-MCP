@@ -29,7 +29,7 @@ Actions run as the eRS user who authorizes the connection. Clients only use data
 - One of: Cursor, Claude (with plugins), or an MCP client that can load Official MCP Registry remotes (e.g. GitHub Copilot)
 
 
-### Cursor (Marketplace)
+###  Install — Cursor
 
 1. Open **Cursor Settings → Plugins**.
 2. Search for **eResource Scheduler**.
