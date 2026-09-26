@@ -12,6 +12,7 @@
   "homepage": "https://www.eresourcescheduler.com",
   "repository": "https://github.com/enbraun-org/eRS-MCP",
   "license": "MIT",
+  "logo": "assets/logo.png",
   "keywords": [
     "ers",
     "eresource-scheduler",
