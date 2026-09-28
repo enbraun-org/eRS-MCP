@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "cloud.eresourcescheduler/eresource-scheduler",
+  "name": "cloud.eresourcescheduler.app/eresource-scheduler",
   "title": "eResource Scheduler",
   "description": "Enterprise resource scheduling for optimal utilization and higher margins.",
   "version": "1.0.0",

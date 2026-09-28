@@ -61,8 +61,8 @@ Listing metadata lives in `server.json` (Official MCP Registry). Clients that su
 
 ### Publish (outside this repo)
 
-1. Host `/.well-known/mcp-registry-auth` on `eresourcescheduler.cloud`.
-2. `mcp-publisher login http --domain eresourcescheduler.cloud …`
+1. Host `/.well-known/mcp-registry-auth` on `app.eresourcescheduler.cloud` containing `v=MCPv1; k=ed25519; p=<public key>`.
+2. `mcp-publisher login http --domain app.eresourcescheduler.cloud …`
 3. `mcp-publisher publish` (from a directory containing this `server.json`).
 4. Email `partnerships@github.com` for GitHub MCP Registry curation.
 
